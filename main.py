@@ -1,4 +1,3 @@
-from numpy.core.fromnumeric import resize
 from ObjectDetection import ObjectDetection as ob
 import glob, cv2, numpy as np
 
@@ -81,5 +80,5 @@ if __name__ == "__main__":
 
             imageHSV = ob(files[i%len(files)], minHSV[0], minHSV[1], minHSV[2], maxHSV[0], maxHSV[1], maxHSV[2])
             imageHSV1 = imageHSV.GetResultHSV()
-            imageHSV1 = cv2.resize(imageHSV1, (resize,resize))
+            imageHSV1 = cv2.resize(imageHSV1, (rsize,rsize))
             cv2.imshow('SelectHSV', imageHSV1)
